@@ -17,17 +17,11 @@ main:
   - title: "LLM Evaluation Project"
     url: /llmevalulationproject/    
 
-  - title: "Automatic DML Tutorials"
+  - title: "Debiased Machine Learning Tutorials"
     url: /automaticdml/    
-    
-  - title: "Structural DML Tutorials"
-    url: /structuraldml/
 
   - title: "Teaching"
     url: /teaching/
-
-  - title: "Software"
-    url: /software/
         
   - title: "Blog Posts"
     url: /year-archive/
