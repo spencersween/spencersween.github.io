@@ -8,26 +8,27 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
-  - title: "Publications"
-    url: /publications/
+  - title: "CV"
+    url: /cv/
+    
+  - title: "Research"
+    url: /research/
 
-  - title: "Talks"
-    url: /talks/    
+  - title: "LLM Evaluation Project"
+    url: /llmevalulationproject/    
+
+  - title: "Automatic DML Tutorials"
+    url: /automaticdml/    
+    
+  - title: "Structural DML Tutorials"
+    url: /structuraldml/
 
   - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Portfolio"
-    url: /portfolio/
+    url: /teaching/
+
+  - title: "Software"
+    url: /software/
         
   - title: "Blog Posts"
     url: /year-archive/
     
-  - title: "CV"
-    url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
