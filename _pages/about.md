@@ -18,6 +18,8 @@ Throughout my PhD, I have worked across public, private, and teaching roles. I s
 
 Outside of work, my interests are broad. In spring and summer, I am an avid tennis player and an enthusiastic, if traitorous, pickleballer. In winter, you can find me snowboarding at Mammoth Mountain or hoop-netting for lobster in Long Beach. And if you share an appreciation for Italian food, art, and history, I would be glad to meet you.
 
+You may reach me at my email, [spencersween@ucsb.edu]("spencersween@ucsb.edu"). I look forward to connecting. 
+
 Recent Highlights
 ------
 1. **[December 11, 2025]** A first draft of my job market paper is now available! You may find it [here]("https://spencersween.github.io/research"). I study how the Community Development Financial Institution program affects local entrepreneurship. Using a semi-parametric difference-in-differences design with debiased machine learning, I find CDFI lender entry into a local credit market increases startup formation, while measures of firm quality are unchanged. Feedback is warmly welcomed.
