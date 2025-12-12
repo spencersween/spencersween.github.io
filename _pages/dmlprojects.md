@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <p>
-Here I collect tutorials and applied examples related to debiased machine learning for causal inference.
+Here I collect code tutorials and applied examples of debiased machine learning (DML) for causal inference.
 </p>
 
 {% for project in site.dmlprojects %}
