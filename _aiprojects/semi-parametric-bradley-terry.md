@@ -6,8 +6,6 @@ excerpt: "A full R+Torch pipeline for semi-parametric Bradley–Terry models for
 author_profile: true
 ---
 
-# Semi Parametric Bradley Terry With Structural Deep Nets
-
 This tutorial walks through a full semi parametric Bradley Terry pipeline that combines:
 
 - Neural networks for conditional preference and cost functions
