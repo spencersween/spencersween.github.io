@@ -571,7 +571,8 @@ Rather than using `H_i` directly, we train a Hessian net that learns `H_pref(X)`
 
 ### 4.3 CostNet and PropensityNet
 
-The cost block works with costs for all models, including the base. For each model \(k\), \(\kappa_k(X_i)\) approximates the log energy for that model on comparison \(i\). The empirical observations are
+The cost block works with costs for all models, including the base. For each model \[ k \], \[ \kappa_k(X_i) \] approximates the log energy for that model on comparison \[ i \]. The empirical observations are
+
 $$
 C_{ik} =
 \begin{cases}
@@ -580,6 +581,7 @@ E_{i2}, & \text{if } D_{\text{cost},ik} = -1,\\[4pt]
 \text{unobserved}, & \text{if } D_{\text{cost},ik} = 0.
 \end{cases}
 $$
+
 Let `m_ik` be the indicator that model `k` is observed in comparison `i`. The squared loss is
 
 $$
