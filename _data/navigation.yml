@@ -15,10 +15,10 @@ main:
     url: /research/
 
   - title: "LLM Evaluation Project"
-    url: /llmevalulationproject/    
+    url: /llmprojects/    
 
-  - title: "DML Tutorials"
-    url: /dmltutorials/    
+  - title: "DML Projects"
+    url: /dmlprojects/    
 
   - title: "Teaching"
     url: /teaching/
