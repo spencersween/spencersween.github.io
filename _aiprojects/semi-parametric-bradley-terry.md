@@ -10,11 +10,11 @@ This tutorial walks through a full semi parametric Bradley Terry pipeline that c
 
 - Neural networks for conditional preference and cost functions
 - Structural information from the Bradley Terry design
-- Judge-aware cross-fit estimation of neural nets
+- Judge-aware cross-fit estimation of neural nets in Torch
 - Influence function representations for four target functionals
-- Uniform confidence bands for all models
+- Uniform confidence bands construction
 - Heterogeneity analysis in covariates and prompt space
-- Policy trees that map prompts to model deployment rules
+- Policy trees that map prompts to optimal routing rules
 
 All code snippets are in R using `torch` for deep learning, `binsreg` for nonparametric heterogeneity, `policytree` for policy learning, and `fixest` for classical regression comparisons.
 
