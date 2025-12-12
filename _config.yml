@@ -49,6 +49,10 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  working:
+    title: 'Working Papers'
+  progress:
+    title: 'Works in Progress'
 
 # Site Settings
 teaser                   : # filename of teaser fallback teaser image placed in /images/ for social media previews
