@@ -11,6 +11,6 @@ author_profile: true
 Here I collect empirical applications and code tutorials for using and studying large language models.
 </p>
 
-{% for project in site.aiprojects %}
+{% for post in site.aiprojects %}
   {% include archive-single.html %}
 {% endfor %}
