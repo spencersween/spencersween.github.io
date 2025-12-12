@@ -30,7 +30,7 @@ We begin from a CSV file that contains pairwise comparisons and covariates.
 
 The key variables are:
 
-- `Y_lab` and `Y_model`: binary outcomes equal to 1 if Creator A wins and 0 otherwise.
+- `Y_lab` and `Y_model`: binary outcomes equal to 1 if Creator A or Model A wins and 0 otherwise.
 - `LD_*`, `MD_*`, `ED_*`: treatment indicators in `{-1, 0, +1}`.
   - `LD_*`: lab level Bradley Terry design.
   - `MD_*`: all model preferences.
