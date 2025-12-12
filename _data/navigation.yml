@@ -14,11 +14,11 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "AI/LLM Projects"
-    url: /llmprojects/    
-
   - title: "DML Projects"
     url: /dmlprojects/    
+
+  - title: "AI Projects"
+    url: /aiprojects/    
 
   - title: "Teaching"
     url: /teaching/
