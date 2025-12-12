@@ -2,7 +2,7 @@
 title: "Structural Deep Learning for Semi Parametric Bradley Terry Models"
 collection: aiprojects
 permalink: /aiprojects/semi-parametric-bradley-terry/
-excerpt: "A full pipeline for semi parametric Bradley Terry models with neural nets, influence functions, and policy learning in R and torch."
+excerpt: "A full R+Torch pipeline for semi-parametric estimation and inference in Bradley–Terry models for LLM pairwise comparisons, using structural multi-head neural nets, automatic influence function construction, and policy learning."
 author_profile: true
 ---
 
@@ -420,9 +420,11 @@ We use a shared `GenericMLP` as the backbone of all networks.
 
 The semi parametric Bradley Terry model assumes that for each comparison `i` and non base model `j` we have a coefficient `theta_j(X_i)`. Let `D_pref,i` be a vector of signed indicators for non base models. Then the log odds that side A wins is
 
-\[
-\eta_i = D_{\text{pref},i}^\top \theta(X_i), \quad p_i = \sigma(\eta_i).
-\]
+$$
+\eta_i = D_{\text{pref},i}^\top \theta(X_i), 
+\quad 
+p_i = \sigma(\eta_i).
+$$
 
 `ThetaNet` outputs the vector `theta(X)`.
 
@@ -471,21 +473,24 @@ The semi parametric Bradley Terry model assumes that for each comparison `i` and
 ### 4.2 HessianLearner: Conditional Preference Hessian
 
 The per comparison log likelihood is
+$$
+\ell_i\big(\theta(X_i)\big) 
+= Y_i \log p_i + (1 - Y_i)\log(1 - p_i).
+$$
 
-\[
-\ell_i(\theta(X_i)) =
-Y_i \log p_i + (1 - Y_i)\log(1 - p_i).
-\]
-
-The gradient and Hessian with respect to the K dimensional coefficient vector `theta(X_i)` are:
-
-\[
-g_i = \frac{\partial \ell_i}{\partial \theta(X_i)} = (p_i - Y_i) D_{\text{pref},i},
-\]
-\[
-H_i = \frac{\partial^2 \ell_i}{\partial \theta(X_i)\partial \theta(X_i)^\top}
-= w_i D_{\text{pref},i} D_{\text{pref},i}^\top, \quad w_i = p_i(1 - p_i).
-\]
+The gradient and Hessian with respect to the \(K\)-dimensional coefficient vector \(\theta(X_i)\) are
+$$
+g_i 
+= \frac{\partial \ell_i}{\partial \theta(X_i)}
+= (p_i - Y_i)\, D_{\text{pref},i},
+$$
+$$
+H_i 
+= \frac{\partial^2 \ell_i}{\partial \theta(X_i)\,\partial \theta(X_i)^\top}
+= w_i\, D_{\text{pref},i} D_{\text{pref},i}^\top,
+\quad
+w_i = p_i(1 - p_i).
+$$
 
 Rather than using `H_i` directly, we train a Hessian net that learns `H_pref(X)` and enforces symmetric positive definiteness with eigenvalues bounded in `(0, hessian_max_eig]`.
 
@@ -568,34 +573,36 @@ Rather than using `H_i` directly, we train a Hessian net that learns `H_pref(X)`
 
 ### 4.3 CostNet and PropensityNet
 
-The cost block works with costs for all models, including the base. For each model `k`, `kappa_k(X_i)` approximates the log energy for that model on comparison `i`. The empirical observations are:
-
-\[
+The cost block works with costs for all models, including the base. For each model \(k\), \(\kappa_k(X_i)\) approximates the log energy for that model on comparison \(i\). The empirical observations are
+$$
 C_{ik} =
 \begin{cases}
-E_{i1}, & \text{if } D_{\text{cost},ik} = +1, \\
-E_{i2}, & \text{if } D_{\text{cost},ik} = -1, \\
+E_{i1}, & \text{if } D_{\text{cost},ik} = +1,\\[4pt]
+E_{i2}, & \text{if } D_{\text{cost},ik} = -1,\\[4pt]
 \text{unobserved}, & \text{if } D_{\text{cost},ik} = 0.
 \end{cases}
-\]
-
+$$
 Let `m_ik` be the indicator that model `k` is observed in comparison `i`. The squared loss is
 
-\[
-\ell_i^{\text{cost}} = \frac{1}{2} \sum_k m_{ik} \big(\kappa_k(X_i) - C_{ik}\big)^2
-\]
+$$
+\ell_i^{\text{cost}}
+= \frac{1}{2} \sum_k m_{ik} \big(\kappa_k(X_i) - C_{ik}\big)^2,
+$$
 
 with gradient
 
-\[
-g^{\text{cost}}_i = m_i \odot (\kappa_i - C_i).
-\]
+$$
+g^{\text{cost}}_i 
+= m_i \odot (\kappa_i - C_i).
+$$
 
 We model the Hessian via a diagonal block whose entries are propensities:
 
-\[
-H_{\text{cost}}(X) = \text{diag}(\pi(X)), \quad \pi_k(X) = P(m_k = 1 \mid X).
-\]
+$$
+H_{\text{cost}}(X) = \operatorname{diag}(\pi(X)),
+\quad
+\pi_k(X) = P(m_k = 1 \mid X).
+$$
 
 `CostNet` and `PropensityNet` implement these components.
 
@@ -1369,10 +1376,10 @@ We now define four influence function targets:
 
 We compute eigen based inverses of the Hessian and use
 
-\[
+$$
 \text{IF}_{\text{pref},i}
-= \theta(X_i) - H_{\text{pref}}(X_i)^{-1} g_{\text{pref},i}.
-\]
+= \theta(X_i) - H_{\text{pref}}(X_i)^{-1}\, g_{\text{pref},i}.
+$$
 
     n      <- nobs
     d_pref <- dimD_pref
@@ -1407,9 +1414,9 @@ Sample means and standard errors:
 
 We extend `theta(X)` with a baseline logit of zero for the base model and pass it through a softmax:
 
-\[
+$$
 \text{logits}_i = \big(0, \theta(X_i)^\top\big)^\top, \quad P_i = \text{softmax}(\text{logits}_i).
-\]
+$$
 
 We obtain the Jacobian of `P` with respect to `theta` via autograd and use the delta method.
 
@@ -1438,10 +1445,10 @@ We obtain the Jacobian of `P` with respect to `theta` via autograd and use the d
 
 We then compute the influence of probabilities:
 
-\[
+$$
 \text{IF}_{\text{best},i}
-= P_i - J_i H_{\text{pref}}(X_i)^{-1} g_{\text{pref},i}.
-\]
+= P_i - J_i\, H_{\text{pref}}(X_i)^{-1}\, g_{\text{pref},i}.
+$$
 
     delta_theta <- H_inv_all$matmul(g_vec)
     IF_best     <- P - J$matmul(delta_theta)$squeeze(3)
@@ -1453,9 +1460,10 @@ We then compute the influence of probabilities:
 
 The cost Hessian is modeled as `H_cost(X) = diag(pi(X))`, so its inverse is `diag(1 / pi(X))` up to clamping. The influence function is
 
-\[
-\text{IF}_{\text{cost},i} = \kappa(X_i) - H_{\text{cost}}(X_i)^{-1} g^{\text{cost}}_i.
-\]
+$$
+\text{IF}_{\text{cost},i}
+= \kappa(X_i) - H_{\text{cost}}(X_i)^{-1}\, g^{\text{cost}}_i.
+$$
 
     eps_cost <- 0.001
 
@@ -1472,20 +1480,19 @@ The cost Hessian is modeled as `H_cost(X) = diag(pi(X))`, so its inverse is `dia
 ### 7.4 Influence for Cost Times Probability Best
 
 The fourth functional is
+$$
+f_j(X) = \kappa_j(X)\, P_j(X).
+$$
 
-\[
-f_j(X) = \kappa_j(X) P_j(X).
-\]
-
-We combine parameters into a single vector `psi = (theta, kappa)` and define the block diagonal inverse Hessian:
-
-\[
-H_{\psi}^{-1}(X) =
+We combine parameters into a single vector \(\psi = (\theta, \kappa)\) and define the block diagonal inverse Hessian:
+$$
+H_{\psi}^{-1}(X)
+=
 \begin{pmatrix}
-H_{\text{pref}}^{-1}(X) & 0 \\
+H_{\text{pref}}^{-1}(X) & 0 \\[4pt]
 0 & H_{\text{cost}}^{-1}(X)
 \end{pmatrix}.
-\]
+$$
 
 The gradients of `f_j` with respect to `psi` are:
 
@@ -1523,11 +1530,13 @@ Gradients with respect to `theta` and `kappa`:
 
 We are often interested in the ratio
 
-\[
-\theta_f = \mathbb{E}[f_j(X)], \quad
-\theta_p = \mathbb{E}[P_j(X)], \quad
-\theta_r = \theta_f / \theta_p.
-\]
+$$
+\theta_f = \mathbb{E}[f_j(X)],
+\quad
+\theta_p = \mathbb{E}[P_j(X)],
+\quad
+\theta_r = \frac{\theta_f}{\theta_p}.
+$$
 
 We use the delta method to get the influence for the ratio:
 
