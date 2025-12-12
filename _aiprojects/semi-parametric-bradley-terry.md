@@ -16,7 +16,7 @@ This tutorial walks through a full semi parametric Bradley Terry pipeline that c
 - Heterogeneity analysis in covariates and prompt space
 - Policy trees that map prompts to optimal routing rules
 
-All code snippets are in R using `torch` for deep learning, `binsreg` for nonparametric heterogeneity estimation, `policytree` for policy learning, and `fixest` for classical regression comparisons.
+All code snippets are in R using `torch` for deep learning, `binsreg` for nonparametric heterogeneity estimation, `policytree` for policy learning, and `fixest` for regression analysis.
 
 The pipeline is implemented on a preference dataset from Compar:IA (`bt_comparia.csv`) where judges compare across 26 randomly-paired models for a given prompt, and Ecologits provide energy usage for each model response.
 
