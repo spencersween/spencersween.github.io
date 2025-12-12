@@ -1,5 +1,5 @@
 ---
-title: "Obtaining Single-Shot Causal Effects in Time-Varying Treatment Settings: An Application to the Regional Impacts of a Small Business Lending Program"
+title: "Single-Shot Effects for Difference-in-Differences with Time-Varying, Continuous Treatments: An Application to the Employment Effects of the SBA 504 Program"
 collection: publications
 category: progress
 permalink: /publication/paper5
