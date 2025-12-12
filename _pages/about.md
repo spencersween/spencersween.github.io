@@ -18,7 +18,7 @@ Throughout my PhD, I have worked across public, private, and teaching roles. I s
 
 Outside of work, my interests are broad. In spring and summer, I am an avid tennis player and an enthusiastic, if traitorous, pickleballer. In winter, you can find me snowboarding at Mammoth Mountain or hoop-netting for lobster in Long Beach. And if you share an appreciation for Italian food, art, and history, I would be glad to meet you.
 
-You may reach me anytime at my email, [spencersween@ucsb.edu]("spencersween@ucsb.edu"). I look forward to connecting. 
+You may reach me at my email, [spencersween@ucsb.edu]("spencersween@ucsb.edu"). I look forward to connecting. 
 
 Recent Highlights
 ------
