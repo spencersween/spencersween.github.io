@@ -12,7 +12,7 @@ site_theme               : "air" # Currently available options are "default", "a
 title                    : "Spencer Sween"
 title_separator          : "-"
 name                     : &name "Spencer Sween"
-description              : &description "UCSB Econ PhD Candidate. Forever Gaucho."   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "UCSB Econ PhD Candidate."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://spencersween.github.io   # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "spencersween/spencersween.github.io/"
@@ -24,7 +24,7 @@ author:
   # Biographic information
   avatar           : "my_profile.png"
   name             : "Spencer Sween"
-  bio              : "UCSB Econ PhD Candidate. Forever Gaucho. I do cool stuff."
+  bio              : "UCSB Econ PhD Candidate. <br> Forever Gaucho. I do cool stuff."
   location         : "Santa Barbara, California"
   employer         : "UC Santa Barbara"
   email            : "spencersween@ucsb.edu" 
