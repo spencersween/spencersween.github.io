@@ -1,6 +1,6 @@
 ---
 title: "Structural Deep Learning for Semi Parametric Bradley Terry Models"
-collection: teaching
+collection: aiprojects
 permalink: /aiprojects/semi-parametric-bradley-terry/
 excerpt: "A full pipeline for semi parametric Bradley Terry models with neural nets, influence functions, and policy learning in R and torch."
 author_profile: true
