@@ -2,7 +2,7 @@
 title: "Structural Deep Learning for Bradley Terry Models"
 collection: aiprojects
 permalink: /aiprojects/semi-parametric-bradley-terry/
-excerpt: "A full R+Torch pipeline for semi-parametric estimation and inference in Bradley–Terry models for LLM pairwise comparisons, using structural multi-head neural nets, automatic influence function construction, and policy learning."
+excerpt: "A full R+Torch pipeline for semi-parametric Bradley–Terry models for LLM pairwise comparisons, using structural multi-head neural nets, automatic influence function construction, conditional inference, and policy learning."
 author_profile: true
 ---
 
