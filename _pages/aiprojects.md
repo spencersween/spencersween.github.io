@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <p>
-Here I collect empirical applications and code tutorials for using semi-parametric methods to study large langauge models with pair-wise preference data. 
+Here I collect empirical applications and code tutorials for using and studying large language models.
 </p>
 
 {% for project in site.aiprojects %}
