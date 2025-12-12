@@ -10,12 +10,13 @@ redirect_from:
 About Me
 ======
 
-I do cool stuff. 
+Howdy! I am an Economics PhD candidate at UC Santa Barbara, working under Doug Steigerwald (chair), Mitchell Hoffman (co-chair), Max Farrell, and Gonzalo Vasquez-Bare.
 
-Current Work and Why You Should Hire Me!
-------
+My research spans applied economics, econometrics, and causal machine learning. In my primary empirical work, I use modern causal inference tools to study programs and policies that shape entrepreneurial activity, financial access, and labor market outcomes. My job market paper, Targeted Financial Access and Entrepreneurship, examines how access to specialized non-bank lenders influences the rate and quality of new firm formation in the United States. On the methodological side, I draw on semi-parametric econometrics, debiased machine learning, and difference-in-differences to expand the toolkit available to applied researchers. I also study how these insights can be used to improve the evaluation and interpretability of large language models through pairwise preference data and Bradley-Terry modeling.
 
-I do really cool stuff that would make you a lot of money. 
+Throughout my PhD, I have worked across public, private, and teaching roles. I spent a year as an economic research intern at the Federal Reserve Board of Governors and later worked in research and strategy for a Santa Barbara hedge fund focused on environmentally and socially responsible investments. More recently, I interned at Amazon in 2024 and 2025 as an economist with the Seller Fees Science and Fulfillment by Amazon Science teams, where I conducted policy-relevant causal analyses for e-commerce decisions. I have also served as the head teaching assistant for UCSB's ECON 140A: Introduction to Econometrics 1 for four years.
+
+Outside of work, my interests are broad. In spring and summer, I am an avid tennis player and an enthusiastic, if traitorous, pickleballer. In winter, you can find me snowboarding at Mammoth Mountain or hoop-netting for lobster in Long Beach. And if you share an appreciation for Italian food, art, and history, I would be glad to meet you.
 
 Recent Highlights
 ------
