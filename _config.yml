@@ -13,7 +13,7 @@ title                    : "Spencer Sween"
 title_separator          : "-"
 name                     : &name "Spencer Sween"
 description              : &description "I do cool stuff."   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://spencersween.github.io   # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+url                      : https://spencersween   # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "spencersween/spencersween.github.io/"
 
