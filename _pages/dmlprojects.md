@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <p>
-Here I collect tutorials, implementations, and examples related to debiased machine learning and modern causal inference.
+Here I collect tutorials and applied examples related to debiased machine learning and modern causal inference.
 </p>
 
 {% for project in site.dmlprojects %}
