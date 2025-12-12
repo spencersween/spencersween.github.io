@@ -10,7 +10,7 @@ This tutorial walks through a full semi parametric Bradley Terry pipeline that c
 
 - Neural networks for conditional preference and cost functions
 - Structural information from the Bradley Terry design
-- Cross fitting over judges to debias regularized neural nets
+- Judge-aware cross-fit estimation of neural nets
 - Influence function representations for four target functionals
 - Uniform confidence bands for all models
 - Heterogeneity analysis in covariates and prompt space
